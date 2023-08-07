@@ -95,14 +95,14 @@ startBtn.addEventListener("click", () => {
     set = setInterval(() => {
       count--;
       time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
-      if (count == 0) {
-        if (minCount != 0) {
-          minCount--;
-          count = 60;
-        } else {
-          clearInterval(set);
-        }
-      }
-    }, 1000);
-  }
-});
+//       if (count == 0) {
+//         if (minCount != 0) {
+//           minCount--;
+//           count = 60;
+//         } else {
+//           clearInterval(set);
+//         }
+//       }
+//     }, 1000);
+//   }
+// });
