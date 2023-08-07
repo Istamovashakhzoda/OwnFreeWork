@@ -53,56 +53,56 @@ focusButton.addEventListener("click", () => {
   time.textContent = `${minCount + 1}:00`;
 });
 
-// shortBreakButton.addEventListener("click", () => {
-//   active = "short";
-//   removeFocus();
-//   shortBreakButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minCount = 4;
-//   count = 59;
-//   time.textContent = `${appendZero(minCount + 1)}:00`;
-// });
+shortBreakButton.addEventListener("click", () => {
+  active = "short";
+  removeFocus();
+  shortBreakButton.classList.add("btn-focus");
+  pauseTimer();
+  minCount = 4;
+  count = 59;
+  time.textContent = `${appendZero(minCount + 1)}:00`;
+});
 
-// longBreakButton.addEventListener("click", () => {
-//   active = "long";
-//   removeFocus();
-//   longBreakButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minCount = 14;
-//   count = 59;
-//   time.textContent = `${minCount + 1}:00`;
-// });
+longBreakButton.addEventListener("click", () => {
+  active = "long";
+  removeFocus();
+  longBreakButton.classList.add("btn-focus");
+  pauseTimer();
+  minCount = 14;
+  count = 59;
+  time.textContent = `${minCount + 1}:00`;
+});
 
-// pause.addEventListener(
-//   "click",
-//   (pauseTimer = () => {
-//     paused = true;
-//     clearInterval(set);
-//     startBtn.classList.remove("hide");
-//     pause.classList.remove("show");
-//     reset.classList.remove("show");
-//   })
-// );
+pause.addEventListener(
+  "click",
+  (pauseTimer = () => {
+    paused = true;
+    clearInterval(set);
+    startBtn.classList.remove("hide");
+    pause.classList.remove("show");
+    reset.classList.remove("show");
+  })
+);
 
-// startBtn.addEventListener("click", () => {
-//   reset.classList.add("show");
-//   pause.classList.add("show");
-//   startBtn.classList.add("hide");
-//   startBtn.classList.remove("show");
-//   if (paused) {
-//     paused = false;
-//     time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
-//     set = setInterval(() => {
-//       count--;
-//       time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
-//       if (count == 0) {
-//         if (minCount != 0) {
-//           minCount--;
-//           count = 60;
-//         } else {
-//           clearInterval(set);
-//         }
-//       }
-//     }, 1000);
-//   }
-// });
+startBtn.addEventListener("click", () => {
+  reset.classList.add("show");
+  pause.classList.add("show");
+  startBtn.classList.add("hide");
+  startBtn.classList.remove("show");
+  if (paused) {
+    paused = false;
+    time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
+    set = setInterval(() => {
+      count--;
+      time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
+      if (count == 0) {
+        if (minCount != 0) {
+          minCount--;
+          count = 60;
+        } else {
+          clearInterval(set);
+        }
+      }
+    }, 1000);
+  }
+});
